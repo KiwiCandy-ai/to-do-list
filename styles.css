@@ -19,6 +19,7 @@ body {
   box-shadow: 1px 1px 2px 2px rgb(181, 181, 181);
   border-radius: 10px ;
   width: 300px;
+  min-width: 250px;
 }
 
 li {
@@ -40,6 +41,10 @@ ul {
     padding: 0
 }
 
+input[type='text'] {
+    margin: 10px 0px;
+    height: 30px;
+}
 
 input[type='checkbox'] {
     height: 20px;
@@ -65,4 +70,10 @@ button > img {
 h1 {
     font-size: 30px;
     font-weight: 500;
+}
+
+#add-task {
+    padding: 2px;
+    width: 30px;
+    height: 30px;
 }

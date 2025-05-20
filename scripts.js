@@ -7,6 +7,8 @@ function addNewTask() {
     const text = document.createTextNode(inputValue);
     const checkbox = document.createElement('input')
     checkbox.type = 'checkbox'
+    checkbox.classList = 'checkbox'
+    checkbox.addEventListener('change', removeTasks)
     const bin = document.createElement('button')
     bin.classList = 'delete'
     bin.addEventListener('click', removeTasks)
@@ -21,8 +23,12 @@ function addNewTask() {
 document.getElementById('new-task').value = ''
 }
 
-
+const checkboxes = document.querySelectorAll('.checkbox')
 const removetasks = document.querySelectorAll('.delete')
+
+checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener('click', removeTasks)
+})
 
 function removeTasks(e) {
     const parentElement = this.parentElement

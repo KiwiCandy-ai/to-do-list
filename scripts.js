@@ -7,17 +7,30 @@ function addNewTask() {
     const text = document.createTextNode(inputValue);
     const checkbox = document.createElement('input')
     checkbox.type = 'checkbox'
-    const deletetask = document.createElement('button')
-    deletetask.classList = 'delete'
-    li.appendChild(text)
+    const bin = document.createElement('button')
+    bin.classList = 'delete'
+    bin.addEventListener('click', removeTasks)
     if (inputValue === '') {
     } else {
-        document.getElementById('task-list').appendChild(checkbox)
+        li.appendChild(checkbox)
+    li.appendChild(text)
+        li.appendChild(bin)
         document.getElementById('task-list').appendChild(li)
-        document.getElementById('task-list').appendChild(deletetask)
     }
+    
 document.getElementById('new-task').value = ''
 }
+
+
+const removetasks = document.querySelectorAll('.delete')
+
+function removeTasks(e) {
+    const parentElement = this.parentElement
+    parentElement.remove() 
+}
+removetasks.forEach((removebutton) => {
+    removebutton.addEventListener('click', removeTasks)
+})
 
 addtask.addEventListener('click', function(e) {
     addNewTask()

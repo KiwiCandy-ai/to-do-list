@@ -1,0 +1,71 @@
+*, *;::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+
+ text-align: center;
+ padding: 10px;
+ box-shadow: 1px 1px 2px 2px rgb(181, 181, 181);
+ border-radius: 10px ;
+ width: 300px;
+ 
+}
+
+li {
+    list-style-type: none;
+    padding: 20px 10px 10px 10px;
+   height: 20px;
+   margin: 0px 20px 0px 0px
+}
+
+ul {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-areas:
+    'input li button';
+    padding: 0;
+}
+
+li, input[type='checkbox'] {
+     border-bottom: 1px solid grey;
+    
+     }
+
+
+input[type='checkbox'] {
+    height: 20px;
+    align-self: center;
+}
+
+.delete {
+    height: 30px;
+    width: 30px;
+    align-self: center;
+    background-image: url("https://raw.githubusercontent.com/KiwiCandy-ai/to-do-list/fd791647e2499051bee3a2d9dc56ef5636cdbb6c/bin-svgrepo-com.svg");
+background-size: contain;
+border: 1px solid grey;
+border-radius: 5px;
+
+
+
+}
+
+button > img {
+    width: 20px;
+    height: 20px;
+  
+    
+   
+}
